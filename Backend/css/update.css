@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+#header-content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#title {
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 80px;
+    text-align: center;
+    color: #ccc;
+    font-family: "楷体";
+    font-size: 50px;
+}
+#logo {
+    float: left;
+    margin-top: 6px;
+}
+
+#instruction {
+    font-size: 18px;
+    font-family: "楷体";
+    line-height: 100px;
+    color: #fff;
+    margin: 0px;
+}
+.jumbotron {
+    padding: 0px;
+    background: transparent;
+    margin-bottom: 0px;
+}
+#content {
+    width: 100%;
+    height: 900px;
+    background-color: #8b8989;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#content .one5 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    margin-top: 150px;
+    background-position: center;
+}
+
+#content .row {
+    margin-top: 100px;
+}
+
+#content .col-md-3 {
+    height: 310px;
+}
+
+#content .one .one1 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/3.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#content .one .one2 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/4.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#content .one .one3 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/校友1.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#content .one .one4 {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-image: url(../img/2.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#content h3 {
+    text-align: center;
+    color: #fff;
+}

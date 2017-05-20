@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#searchBox {
+    position: relative;
+}
+
+#searchBox ul {
+    padding: 0px;
+    position: absolute;
+    top: -1.5px;
+    left: 0px;
+    z-index: 2;
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 280px;
+}
+
+#searchBox ul li {
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

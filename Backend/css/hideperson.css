@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#searchBox {
+    position: relative;
+}
+
+#searchBox ul {
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 180px;
+}
+
+#searchBox ul li {
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+#header-content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#logo {
+    float: left;
+    margin-top: 6px;
+}
+
+#title {
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 80px;
+    text-align: center;
+    color: #ccc;
+    font-family: "楷体";
+    font-size: 50px;
+}
+
+#form, #list {
+    margin: 0 auto;
+    width: 700px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "楷体";
+}
+
+p {
+    font-size: 16px;
+    font-family: "楷体";
+}
+
+#key_world, #select {
+    width: 180px;
+    height: 20px;
+}
+
+#content {
+    width: 270px;
+    height: 90px;
+}
+
+#reason {
+    width: 300px;
+}
+
+#confirm {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 12px/25px Arial, sans-serif;
+}
+
+.each {
+    min-height: 150px;
+}
+
+.name {
+    font-size: 20px;
+    font-family: "楷体";
+}
+
+.jobs {
+    font-size: 16px;
+    font-family: "楷体";
+}
+
+.cancel {
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 30px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 12px/25px Arial, sans-serif;
+    float: right;
+}
+
+#instruction {
+    line-height: 100px;
+}
+
+#body {
+    min-height: 900px;
+}
+.button {
+    float: right;
+    height: 45px;
+    width: 85px;
+    background-color: transparent;
+    margin-top: -30px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-right: 50px;
+}
+
+.button:hover {
+    transition: all .9s;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    background-color: #999;
+    border-color: #999;
+    color: #000;
+}

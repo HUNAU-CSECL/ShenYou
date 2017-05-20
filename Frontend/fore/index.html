@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>莘友</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div id="page-nav" class="jumbotron navbar-fixed-top">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul class="nav navbar-nav nav-logo">
+                                <a href="index.html">ShenYou</a>
+                            </ul>
+                        </div>
+                        <div class="col-md-8">
+                            <ul id="menu" class="nav navbar-nav navbar-respond">
+                                <li data-menuanchor="page1" class="active"><a href="index.html">首页</a></li>
+                                <li data-menuanchor="page2" class=""><a href="index.html#page2">高校排行榜</a></li>
+                                <li data-menuanchor="page3" class=""><a href="index.html#page3">知名校友信息</a></li>
+                                <li data-menuanchor="page4" class=""><a href="index.html#page4">关于我们</a></li>
+                                <li data-menuanchor="page5" class=""><a href="index.html#page5">联系我们</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <ul class="nav navbar-nav nav-login">
+                                <li class="incook"><a id="login_a">登录</a></li>
+                                <li class="incook"><a id="enroll_a">注册</a></li>
+                                <li id="login_user" class="oncook"><a></a></li>
+                                <li id="admins" class="oncook"><a>管理中心</a></li>
+                                <li id="logout" class="oncook"><a>退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="dowebok">
+        <div class="section">
+            <div id="page-search" class="jumbotron">
+                <div class="search-inbox">
+                    <form role="form">
+                        <h1 data-scroll-reveal="enter top over 1s and move 100px">莘友，有效的寻找校友</h1>
+                        <div data-scroll-reveal="enter bottom over 1s and move 100px" class="form-group">
+                            <a class="button1 ck1"></a>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="搜索高校">
+                            <button id='search_sub' class="button2" type="button"></button>
+                        </div>
+                        <div id="searchBox" display:none></div>
+                    </form>
+                    <ul class="ul1">
+                        <li><span>华北地区：</span>
+                            <a href="javascript:void(0)" data-value="16">北京</a>
+                            <a href="javascript:void(0)" data-value="17">天津</a>
+                            <a href="javascript:void(0)" data-value="25">河北</a>
+                            <a href="javascript:void(0)" data-value="22">山西</a>
+                            <a href="javascript:void(0)" data-value="30">内蒙古</a>
+                        </li>
+                        <li><span>东北地区：</span>
+                            <a href="javascript:void(0)" data-value="20">辽宁</a>
+                            <a href="javascript:void(0)" data-value="19">吉林</a>
+                            <a href="javascript:void(0)" data-value="18">黑龙江</a>
+                        </li>
+                        <li><span>华东地区：</span>
+                            <a href="javascript:void(0)" data-value="11">上海</a>
+                            <a href="javascript:void(0)" data-value="12">江苏</a>
+                            <a href="javascript:void(0)" data-value="13">浙江</a>
+                            <a href="javascript:void(0)" data-value="9">安徽</a>
+                            <a href="javascript:void(0)" data-value="15">福建</a>
+                            <a href="javascript:void(0)" data-value="10">江西</a>
+                            <a href="javascript:void(0)" data-value="14">山东</a>
+                        </li>
+                        <li><span>华南地区：</span>
+                            <a href="javascript:void(0)" data-value="1">广东</a>
+                            <a href="javascript:void(0)" data-value="3">广西</a>
+                            <a href="javascript:void(0)" data-value="2">海南</a>
+                        </li>
+                        <li><span>华中地区：</span>
+                            <a href="javascript:void(0)" data-value="8">河南</a>
+                            <a href="javascript:void(0)" data-value="6">湖北</a>
+                            <a href="javascript:void(0)" data-value="7">湖南</a>
+                            <a href="javascript:void(0)" data-value="">江西</a>
+                        </li>
+                        <li><span>西南地区：</span>
+                            <a href="javascript:void(0)" data-value="26">四川</a>
+                            <a href="javascript:void(0)" data-value="4">贵州</a>
+                            <a href="javascript:void(0)" data-value="5">云南</a>
+                            <a href="javascript:void(0)" data-value="27">重庆</a>
+                            <a href="javascript:void(0)" data-value="28">西藏</a>
+                        </li>
+                        <li><span>西北地区：</span>
+                            <a href="javascript:void(0)" data-value="21">陕西</a>
+                            <a href="javascript:void(0)" data-value="23">甘肃</a>
+                            <a href="javascript:void(0)" data-value="29">青海</a>
+                            <a href="javascript:void(0)" data-value="24">宁夏</a>
+                            <a href="javascript:void(0)" data-value="31">新疆</a>
+                        </li>
+                        <li><span>港澳台地区：</span>
+                            <a href="javascript:void(0)" data-value="32">香港</a>
+                            <a href="javascript:void(0)" data-value="33">澳门</a>
+                            <a href="javascript:void(0)" data-value="34">台湾</a>
+                        </li>
+                    </ul>
+                    <ul class="ul2"></ul>
+                </div>
+                <a href="#abouts" class="scroll-down toscroll hidden-xs">
+                    <span class="down-button scroll-button"></span>
+                    <span class="down-button scroll-button"></span>
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <div id="page-top" class="jumbotron">
+                <div class="container">
+                    <h2 class="project">2017年中国大学排行榜10强</h2>
+                    <div class="xian"></div>
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <th>#</th>
+                                <th>学校名称</th>
+                                <th>所在地区</th>
+                                <th>总分</th>
+                                <th>星级排名</th>
+                                <td class="top1">
+                                </td>                            
+                            </tr>
+                            <tr>
+                                <td><img src="../img/top1.jpg" alt=""></td>
+                                <td>北京大学</td>
+                                <td>北京</td>
+                                <td>100.00</td>
+                                <td>8星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../img/top2.jpg" alt=""></td>
+                                <td>清华大学</td>
+                                <td>北京</td>
+                                <td>96.91</td>
+                                <td>8星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../img/top3.jpg" alt=""></td>
+                                <td>武汉大学</td>
+                                <td>湖北</td>
+                                <td>82.57</td>
+                                <td>6星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>复旦大学</td>
+                                <td>上海</td>
+                                <td>82.47</td>
+                                <td>7星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>浙江大学</td>
+                                <td>浙江</td>
+                                <td>82.31</td>
+                                <td>6星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>上海交通大学</td>
+                                <td>上海</td>
+                                <td>81.73</td>
+                                <td>6星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>南京大学</td>
+                                <td>江苏</td>
+                                <td>80.23</td>
+                                <td>7星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>中国人民大学</td>
+                                <td>北京</td>
+                                <td>79.28</td>
+                                <td>7星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>吉林大学</td>
+                                <td>吉林</td>
+                                <td>76.01</td>
+                                <td>6星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr id="line">
+                                <td>10</td>
+                                <td>华中科技大学</td>
+                                <td>湖北</td>
+                                <td>74.84</td>
+                                <td>6星级</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="page-student" class="jumbotron">
+                <div class="container">
+                    <h2 class="project">知名校友信息</h2>
+                    <div class="xian"></div>
+                    <div id="aa">
+                                            <div class="row">
+                        <div class="col-md-3 dd dd1"></div>
+                        <div class="col-md-3 ss">
+                            <h5 class="sign">政界校友</h5>
+                            <h4 class="title">许达哲</h4>
+                            <P>许达哲，男，汉族，1956年9月出生，湖南浏阳人，研究生，工学硕士，研究员，1975年12月参加工作，1982年1月加入中国共产党。现任十八届中央委员，湖南省委副书记，省人民政府省长、党组书记。
+                            </P>
+                            <div class="bor"><div class="bori"></div></div>
+                        </div>
+                        <div class="col-md-3 dd dd2"></div>
+                        <div class="col-md-3 ss">
+                            <h5 class="sign">商界校友</h5>
+                            <h4 class="title">李彦宏</h4>
+                            <P>百度公司的联合创始人、董事长兼首席执行官，全面负责百度公司的战略规划和运营管理。李先生自2000年1月百度成立以来就任职其董事会主席，并于2004年1月起出任百度首席执行官。2000年2月至2003年12月任职百度总裁。
+                            </P>
+                            <div class="bor"><div class="bori"></div></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 ss">
+                            <h5 class="sign">商界校友</h5>
+                            <h4 class="title">魏栓师</h4>
+                            <P>高级经济师,现任包钢(集团)公司董事长、党委书记。2012.06-2015.04内蒙古自治区国资委党委委员、副主任兼内蒙古国有资产运营有限公司董事长;2015.04-2016.04内蒙古自治区国资委党委书记、主任;2016.04--包钢(集团)公司董事长、党委书记。
+                            </P>
+                            <div class="borr"><div class="borii"></div></div>
+                        </div>
+                        <div class="col-md-3 dd dd3"></div>
+                        <div class="col-md-3 ss">
+                            <h5 class="sign">学界校友</h5>
+                            <h4 class="title">艾国祥</h4>
+                            <P>天体物理学家，1938年2月生于湖南益阳。1963年毕业于北京大学地球物理系。1993年当选为中国科学院院士。2002年当选为第三世界科学院院士。中国科学院国家天文台研究员。曾任中国科学院北京天文台台长，中国科学院数学物理学部主任，1997～2000年任国际天文学联合会第十委员会主席。
+                            </P>
+                            <div class="borr"><div class="borii"></div></div>
+                        </div>
+                        <div class="col-md-3 dd dd4"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="page-about" class="jumbotron">
+                <div class="container">
+                    <h2 class="project">莘友项目</h2>
+                    <div class="xian"></div>
+                    <p class="intr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莘友有限公司于2017年1月成立。公司以“帮助高校高效管理校友信息”为理念，以帮助高校， 知名校友之间的交流合作，以更好的实现校友经济为宗旨，致力于帮助高校全面掌握知名校友信息。 公司业务以搜索引擎模式，以“检索校友信息”为基本功能，为高校构建管理平台；同时为用户提供了解的平台 ，用户登录后可以选择自己想要关注的校友，以实时掌握校友动态。
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莘友网是为用户提供的信息是通过用户自主选择想要了解的信息，来方便用户能够在最短的时间 了解到信息，为用户节约时间。同时我们的信息会实时更新，确保用户了解到最新的消息。我们网站 最大的亮点就是实现高效的信息管理功能。
+                    </p>
+                    <h2 class="team">莘友团队</h2>
+                    <div class="xian"></div>
+                    <div id="carousel-example-team" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="zy"></div>
+                                    </div>
+                                    <div class="col-md-2"><img src="../img/wrj.jpg" alt="..." class="img-circle"></div>
+                                    <div class="col-md-6">
+                                        <p class="js">性格开朗，为人细心，做事认真，有责任心。团队角色：前端页面布局和设计，熟悉html5，css3，javascript语言，熟练掌握bootstrap，weui框架和Photoshop软件。</p>
+                                        <div class="xian"></div>
+                                        <p class="name">王睿佳</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="yy"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="zy"></div>
+                                    </div>
+                                    <div class="col-md-2"><img src="../img/whj.jpg" alt="..." class="img-circle"></div>
+                                    <div class="col-md-6">
+                                        <p class="js">性格开朗，爱好广泛。   团队角色：整体运营，数据整合，功能开发，熟悉Axure，ppt，pr等软件的应用，了解互联网运营</p>
+                                        <div class="xian"></div>
+                                        <p class="name">吴虹洁</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="yy"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="zy"></div>
+                                    </div>
+                                    <div class="col-md-2"><img src="../img/yy.jpg" alt="..." class="img-circle"></div>
+                                    <div class="col-md-6">
+                                        <p class="js">爱钻研、爱折腾、追求完美 团队角色：后台研发 熟悉PHP语言及框架的使用，熟悉数据库MySQL操作，了解前端html、css、JavaScript、ajax， 熟悉Git的使用。
+                                        </p>
+                                        <div class="xian"></div>
+                                        <p class="name">于越</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="yy"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-team" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-team" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="page-contect" class="jumbotron">
+                <div class="container">
+                    <div class="link">
+                        <h2 class="contect-us">联系我们</h2>
+                        <div class="xian"></div>
+                        <div class="row">
+                            <div class="col-md-4 first">
+                                <div class="one">
+                                    <div class="one1"></div>
+                                </div>
+                                <div class="content">
+                                    <h4>联系客服</h4>
+                                    <h5>电话：400-630-9191</h5>
+                                    <h5>邮箱：service@sctuhuan.com</h5>
+                                    <h5>工作时间：09：00~18：00（周一到周日）</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="one">
+                                    <div class="one2"></div>
+                                </div>
+                                <div class="content">
+                                    <h4>商务合作</h4>
+                                    <h5>联系人：张经理</h5>
+                                    <h5>电话：028-83226092</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="one">
+                                    <div class="one3"></div>
+                                </div>
+                                <div class="content">
+                                    <h4>公司地址</h4>
+                                    <h5>四川省成都市高新区府城大道399号天府新谷7栋</h5>
+                                    <h5>邮编：610017</h5>
+                                    <h5>传真：028-83226095</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <h2 class="feedback">反馈意见</h2>
+                        <div class="xian"></div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group3">
+                                <label class="sr-only" for="message">Your message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="你想对我们说..." rows="8"></textarea>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group4">
+                                <button type="button" class="btn btn-primary btn-submit" id="send-advise">发送</button>
+                                <button type="button" class="btn btn-primary btn-submit" id="send-false" style="display: none;color:red;">抱歉！请您先登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录注册模态框 -->
+    <div id="login" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"><span>&times;</span></button>
+                    <h3 class="modal-title text-center"">ShenYou</h3>
+                </div>
+                <div class="modal-body">
+                <div class="modal-body-title">
+                    <div class="xian left"></div>
+                    <div class="xian right"></div>
+                    <span class="login-tit">欢迎进入莘友网！</span>
+                </div>
+                    
+                    <form class="form-horizontal" role="form" id="form_reg">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">邮箱：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="input1" placeholder="请输入邮箱" required="required">
+                            </div>
+                            <label id="input1-d">邮箱输入有误</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">密码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="input2" placeholder="请输入密码" required="required">
+                            </div>
+                            <label id="input2-d">密码输入有误</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-block" id="login-btn">登录</button>
+                            <input id="login-btn-s" type="hidden" value="">
+                            <button class="reset" type="reset"></button>
+                        </div>
+                    </form>
+                    <a id="unkownPassword">忘记密码<<</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="enroll" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"><span>&times;</span></button>
+                    <h3 class="modal-title text-center">ShenYou</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-title"><div class="xian left"></div>
+                    <div class="xian right"></div>
+                    <span class="login-tit">欢迎注册莘友网！</span></div>
+                    <form class="form-horizontal" role="form" id="form_reg">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="input3" placeholder="请输入昵称" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="inputPassword3" class="col-md-3 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="inputPassword1" placeholder="请输入密码" required="required">
+                                <label id="inputPassword1-c">密码不得少于8位</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">确认密码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="请再次输入密码" required="required">
+                                <label id="inputPassword2-d">两次输入的密码不同</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail6" class="col-md-3 control-label">所在高校：</label>
+                            <div class="col-md-9" id="inschool">
+                                <input type="text" class="form-control" id="inputEmail7" data-value='' placeholder="请输入你所在的学校" required="required">
+                                <div id="regist-searchBox" style=""></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input6" class="col-md-3 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="input4" placeholder="请输入邮箱号" required="required">
+                                <button type="button" class="btn btn-primary" id="send-code">发送验证码</button>
+                                <div id="both1"></div>
+                                <label id="input4-d">此邮箱已被注册</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail7" class="col-md-3 control-label">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="inputEmail8" placeholder="请输入验证码" required="required">
+                                <label id="inputEmail8-d">验证码有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-block" id="register-btn">注册</button>
+                            <button class="reset" type="reset"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="unkownPasswordMd">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">找回密码</h4>
+                </div>
+                <div class="modal-body modal2">
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label for="input6" class="col-md-3 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+                            <div class="col-md-7">
+                                <input type="email" class="form-control" id="input5" placeholder="请输入邮箱号" required="required">
+                                <button type="button" class="btn btn-primary" id="send-code-agin">发送验证码</button>
+                                <div id="both2"></div>
+                                <label id="input5-d">此邮箱有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail10" class="col-md-3 control-label">验&nbsp;证&nbsp;码：</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="inputEmail9" placeholder="请输入验证码">
+                                <label id="inputEmail9-d">验证码有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">新&nbsp;密&nbsp;码：</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                                <label id="inputPassword3-d">密码不得少于8位</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">确认密码：</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="请再次输入密码">
+                                <label id="inputPassword4-d">两次输入的密码不同</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" id="modify" data-dismiss="modal">确认找回</button>
+                        <button class="reset" type="reset"></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+<script src="../js/jquery.1.10.2.min.js"></script>      <!-- JQ库 -->
+<script src="../js/bootstrap.js"></script>              <!-- bootstrap库 -->
+<script src="../js/jquery.fullPage.min.js"></script>    <!-- 全屏插件 -->
+<script src="../js/scrollReveal.js"></script>           <!-- scrollReveal插件 -->
+<script src="../js/jquery.cookie.js"></script>          <!-- cookie 插件 -->   
+<script src="../js/common.func.js"></script>            <!-- 公共函数库 -->
+<script src="../js/common.js"></script>                 <!-- 公共调用 -->
+<script src="../js/index.js"></script>     
+</html>
+<script>
+$('#myTab a').click(function(e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+</script>

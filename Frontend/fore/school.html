@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>高校 </title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <link rel="stylesheet" href="../css/school.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div id="page-nav" class="jumbotron navbar-fixed-top">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul class="nav navbar-nav nav-logo">
+                                <a href="index.html">ShenYou</a>
+                            </ul>
+                        </div>
+                        <div class="col-md-8">
+                            <ul id="menu" class="nav navbar-nav navbar-respond">
+                                <li data-menuanchor="page1" class=""><a href="index.html">首页</a></li>
+                                <li data-menuanchor="page2" class=""><a href="index.html#page2">高校排行榜</a></li>
+                                <li data-menuanchor="page3" class=""><a href="index.html#page3">知名校友信息</a></li>
+                                <li data-menuanchor="page4" class=""><a href="index.html#page4">关于我们</a></li>
+                                <li data-menuanchor="page5" class=""><a href="index.html#page5">联系我们</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <ul class="nav navbar-nav nav-login">
+                                <li class="incook"><a id="login_a">登录</a></li>
+                                <li class="incook"><a id="enroll_a">注册</a></li>
+                                <li id="login_user" class="oncook"><a></a></li>
+                                <li id="admins" class="oncook"><a>管理中心</a></li>
+                                <li id="logout" class="oncook"><a>退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="login" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"><span>&times;</span></button>
+                    <h3 class="modal-title text-center"">ShenYou</h3>
+                </div>
+                <div class="modal-body">
+                <div class="modal-body-title">
+                    <div class="xian left"></div>
+                    <div class="xian right"></div>
+                    <span class="login-tit">欢迎进入莘友网！</span>
+                </div>
+                    
+                    <form class="form-horizontal" role="form" id="form_login">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">邮箱：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="input1" placeholder="请输入邮箱" required="required">
+                            </div>
+                            <label id="input1-d">邮箱输入有误</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">密码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="input2" placeholder="请输入密码" required="required">
+                            </div>
+                            <label id="input2-d">密码输入有误</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-block" id="login-btn">登录</button>
+                            <button class="reset" type="reset"></button>
+                        </div>
+                    </form>
+                    <a id="unkownPassword">忘记密码<<</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="enroll" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"><span>&times;</span></button>
+                    <h3 class="modal-title text-center">ShenYou</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-title"><div class="xian left"></div>
+                    <div class="xian right"></div>
+                    <span class="login-tit">欢迎注册莘友网！</span></div>
+                    <form class="form-horizontal" role="form" id="form_reg">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-md-3 control-label">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="input3" placeholder="请输入昵称" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="inputPassword3" class="col-md-3 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="inputPassword1" placeholder="请输入密码" required="required">
+                                <label id="inputPassword1-c">密码不得少于8位</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">确认密码：</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="请再次输入密码" required="required">
+                                <label id="inputPassword2-d">两次输入的密码不同</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail6" class="col-md-3 control-label">所在高校：</label>
+                            <div class="col-md-9" id="inschool">
+                                <input type="text" class="form-control" id="inputEmail7" data-value='' placeholder="请输入你所在的学校" required="required">
+                                <div id="regist-searchBox" style=""></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input6" class="col-md-3 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="input4" placeholder="请输入邮箱号" required="required">
+                                <button type="button" class="btn btn-primary" id="send-code">发送验证码</button>
+                                <div id="both1"></div>
+                                <label id="input4-d">此邮箱已被注册</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail7" class="col-md-3 control-label">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="inputEmail8" placeholder="请输入验证码" required="required">
+                                <label id="inputEmail8-d">验证码有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button data-card="" type="button" class="btn btn-primary btn-block" id="register-btn">注册</button>
+                            <button class="reset" type="reset"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-banner" class="jumbotron">
+        <div class="container topcenter">
+            <h1 id="school_name"></h1>
+            <h2 id="school_eng_name"></h2>
+            <button class="btn btn-mol btn-lg btn-primary" id="schCare">关注高校</button>
+        </div>  
+    </div>
+    <div id="page-postion" class="jumbotron">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="active">当前位置：</li>
+                <li><a href="index.html">首页</a></li>
+                <li class="active">所在高校</li>
+            </ol>
+        </div>
+    </div>
+    <div id="page-content1" class="jumbotron">
+        <div class="container">
+        <h1>学校简介</h1>
+        <a id="web" target="_Blank">进入高校官网</a>
+            <div class="row">
+                <div class="col-md-12" id="introduct"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-student" class="jumbotron">
+        <div class="container">
+            <!-- Nav tabs -->
+            <h1>校友分类</h1>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    
+                    <li class="active"><a href="#sj" data-toggle="tab">商界校友</a></li>
+                    <li><a href="#xj" data-toggle="tab">学界校友</a></li>
+                    <li><a href="#zj" data-toggle="tab">政界校友</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="sj">
+                        <div class="row">
+                            <div class="load">
+                                <img src="../img/load.gif">
+                                <div class="loading">正在加载中...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="xj">
+                        <div class="row">
+                            <div class="load">
+                                <img src="../img/load.gif">
+                                <div class="loading">正在加载中...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="zj">
+                        <div class="row">
+                            <div class="load">
+                                <img src="../img/load.gif">
+                                <div class="loading">正在加载中...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="page-footer-three" class="jumbotron">
+        <h5 class="text-center">Copyright © 2017 莘友网</h5>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close">&times;</button>
+                    <h4 class="modal-title">校友简介</h4>
+                </div>
+                <div class="modal-body">
+                    <p><span class="bod">姓名：</span><span class="m-name"></span></p>
+                    <p><span class="bod">职位：</span><span class="m-job"></span></p>
+                    <p><span class="bod">简介：</span><span class="m-contact"></span></p>
+                    <p><span class="bod">更新时间：</span><span class="m-time"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="perCare">关注</button>
+                    <button type="button" class="btn btn-default closed">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="unkownPasswordMd">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">找回密码</h4>
+                </div>
+                <div class="modal-body modal2">
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label for="input6" class="col-md-3 control-label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</label>
+                            <div class="col-md-7">
+                                <input type="email" class="form-control" id="input5" placeholder="请输入邮箱号" required="required">
+                                <button type="button" class="btn btn-primary" id="send-code-agin">发送验证码</button>
+                                <div id="both2"></div>
+                                <label id="input5-d">此邮箱有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail10" class="col-md-3 control-label">验&nbsp;证&nbsp;码：</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="inputEmail9" placeholder="请输入验证码">
+                                <label id="inputEmail9-d">验证码有误</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">新&nbsp;密&nbsp;码：</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                                <label id="inputPassword3-d">密码不得少于8位</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-md-3 control-label">确认密码：</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="请再次输入密码">
+                                <label id="inputPassword4-d">两次输入的密码不同</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" id="modify" data-dismiss="modal">确认找回</button>
+                        <button class="reset" type="reset"></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+
+<script src="../js/jquery.1.10.2.min.js"></script>      <!-- JQ库 -->
+<script src="../js/bootstrap.js"></script>              <!-- bootstrap库 -->
+<script src="../js/jquery.fullPage.min.js"></script>    <!-- 全屏插件 -->
+<script src="../js/scrollReveal.js"></script>           <!-- scrollReveal插件 -->
+<script src="../js/jquery.cookie.js"></script>          <!-- cookie 插件 -->
+<script src="../js/wow.min.js"></script>
+    
+<script src="../js/common.func.js"></script>            <!-- 公共函数库 -->
+<script src="../js/common.js"></script>                 <!-- 公共调用 -->
+
+<script src="../js/school.js"></script>
+
+</html>

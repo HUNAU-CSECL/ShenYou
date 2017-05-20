@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+#header-content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#title {
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 80px;
+    text-align: center;
+    color: #ccc;
+    font-family: "楷体";
+    font-size: 50px;
+}
+
+.main {
+    margin: 0 auto;
+    width: 800px;
+    min-height: 900px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "楷体";
+}
+
+#logo {
+    float: left;
+    margin-top: 6px;
+}
+
+#instruction {
+    font-size: 16px;
+    font-family: "楷体";
+    line-height: 100px;
+}
+
+.searchBox {
+    position: relative;
+}
+
+.searchBox ul {
+    padding: 0px;
+    position: absolute;
+    top: 33px;
+    left: 264px;
+    z-index: 2;
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 232.33px;
+    cursor: default;
+}
+
+#searchBox ul li {
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.roe {
+    width: 33%;
+    float: left;
+    height: 30px;
+}
+
+div.roe {
+    text-align: right;
+}
+
+div.roe button {
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 28px;
+    width: 80px;
+    text-align: center;
+    line-height: 28px;
+    margin-left: 5px;
+}
+
+.each {
+    height: 50px;
+    padding-top: 20px;
+}
+
+#more {
+    text-align: center;
+    color: #7B7B7B;
+    font-family: "楷体";
+}
+
+.name {
+    line-height: 50px;
+    float: left;
+    font-size: 14px;
+}
+
+.button {
+    float: right;
+    height: 45px;
+    width: 85px;
+    background-color: transparent;
+    margin-top: -30px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-right: 50px;
+}
+
+.button:hover {
+    transition: all .9s;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    background-color: #999;
+    border-color: #999;
+    color: #000;
+}
