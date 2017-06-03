@@ -1019,3 +1019,9 @@ ul.con-school li {
 #aa{
     margin-top: 100px;
 }
+.a-sch{
+    color:#fff;
+}
+.a-sch:hover{
+    color:#00c2ff;
+}
