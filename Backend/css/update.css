@@ -113,3 +113,24 @@
     text-align: center;
     color: #fff;
 }
+
+.button {
+    float: right;
+    height: 45px;
+    width: 85px;
+    background-color: transparent;
+    margin-top: -30px;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-right: 50px;
+}
+
+.button:hover {
+    transition: all .9s;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    background-color: #999;
+    border-color: #999;
+    color: #000;
+}

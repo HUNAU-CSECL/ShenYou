@@ -16,7 +16,7 @@ class persons
     {
         require_once Root_Path . "/Model/mysql.php";
         $db     = new MySQL("127.0.0.1", "root", "", "alumnus");
-        $sql    = "SELECT * FROM `persons` WHERE id=$num";
+        $sql    = "SELECT * FROM `persons` WHERE id=$num AND `data_state`=1";
         $result = $db->query($sql);
         return $db->assoc($result);
         $db->dbClose();
@@ -109,7 +109,7 @@ class persons
             $minSQL .= $value . ",";
         }
         $minSQL = substr($minSQL, 0, strlen($minSQL) - 1);
-        $sql = "SELECT * FROM `persons` WHERE id IN (" . $minSQL . ") AND data_state = 1";
+        $sql    = "SELECT * FROM `persons` WHERE id IN (" . $minSQL . ") AND data_state = 1";
         $result = $db->query($sql);
         return $db->allAssoc($result);
         $db->dbClose();
