@@ -80,6 +80,9 @@ foreach ($rows as $key => $value) {
         if ($img == '') {
             $img = '';
         }
+        if ($grade == 10.00) {
+            $grade = 9.99;
+        }
         $list['pol'][] = [
             'per_id' => $per_id,
             'name'   => $name,
