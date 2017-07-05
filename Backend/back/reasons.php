@@ -33,7 +33,7 @@ foreach ($row as $key => $value) {
     //丑闻原由
     $list['reason'] = $value['reason'];
     //校友名
-    $persons_row  = $persons->find_by_id($id);
+    $persons_row  = $persons->findall_by_id($id);
     $list['name'] = $persons_row['name'];
     //校友政界职位
     $job_id = $pol_perjob->find_by_perid($id);

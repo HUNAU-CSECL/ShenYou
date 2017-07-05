@@ -21,6 +21,16 @@ class persons
         return $db->assoc($result);
         $db->dbClose();
     }
+    //查询person表依据id
+    public function findall_by_id($num)
+    {
+        require_once Root_Path . "/Model/mysql.php";
+        $db     = new MySQL("127.0.0.1", "root", "", "alumnus");
+        $sql    = "SELECT * FROM `persons` WHERE id=$num";
+        $result = $db->query($sql);
+        return $db->assoc($result);
+        $db->dbClose();
+    }
     //查person依据关键词
     public function find_by_keyword($string)
     {
