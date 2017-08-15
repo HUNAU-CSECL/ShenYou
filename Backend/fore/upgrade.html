@@ -1,49 +1,54 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" content="text/html" http-equiv="Content-Type">
-        <title>
-            职位等级更新
-        </title>
-        <script src="../js/jquery-3.1.1.min.js"></script>
-        <script src="../js/upgrade.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/upgrade.css">
-    </meta>
+	<meta charset="utf-8">
+	<title>
+		职位等级更新
+	</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="../css/upgrade.css">
 </head>
-<style type="text/css">
-</style>
 
-<div id="header">
-	<div id="header-content">
-		<img src="../img/logo.png" id="logo">
-		<div id="title">更新职位等级</div>
-		<a href="update.html"><button class="button">返回首页</button></a>
+<body>
+	<div id="header">
+		<div id="header-content">
+			<img src="../img/logo.png" id="logo">
+			<div id="title">更新职位等级</div>
+			<a href="update.html"><button class="button">返回首页</button></a>
+		</div>
 	</div>
-</div>
-<div id="body">
-	<div class="main">
-		<h2>政界</h2>
-		<button id="autoPol">一键更新</button>
-		<div id="pol"></div>
-		<div id="pol_more">点击加载更多</div>
-		<hr>
+	<div id="body">
+		<div class="main">
+			<h2>政界</h2>
+			<button id="autoPol">一键更新</button>
+			<div id="pol"></div>
+			<button id="pol_more">点击加载更多</button>
+			<hr>
+		</div>
+
+		<div class="main">
+			<h2>商界</h2>
+			<button id="auto">一键更新</button>
+			<div id="eco"></div>
+			<button id="eco_more">点击加载更多</button>
+			<hr>
+		</div>
+
+		<div class="main">
+			<h2>学界</h2>
+			<div id="lea"></div>
+			<button id="lea_more">点击加载更多</button>
+		</div>
+	</div>
+	<div id="footer">
+		<p id="instruction">Copyright © 2017 莘友网</p>
 	</div>
 
-	<div class="main">
-		<h2>商界</h2>
-		<button id="auto">一键更新</button>
-		<div id="eco"></div>
-		<div id="eco_more">点击加载更多</div>
-		<hr> 
-	</div>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/upgrade.js"></script>
+</body>
 
-	<div class="main">
-		<h2>学界</h2>
-		<div id="lea"></div>
-		<div id="lea_more">点击加载更多</div>
-	</div>
-</div>
-<div id="footer">
-	<p id="instruction">Copyright © 2017 莘友网</p>
-</div>
 </html>

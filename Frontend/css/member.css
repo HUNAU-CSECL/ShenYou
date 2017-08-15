@@ -7,87 +7,82 @@
     text-align: center;
     font: 50px "Microsoft Yahei";
     color: #fff;
-    margin-top: 80px;
 }
 #page-nav {
-    height: 80px;
-    background: #333;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.7);
     border-width: 0px;
+    margin: 0px;
+    padding: 10px 0 10px 0;
+    font-size:14px;
+    border:none;
 }
-
 #page-nav .container-fluid {
-    height: 80px;
+    height: 60px;
 }
-
 #page-nav .navbar-default {
     background: transparent;
     border: none;
 }
-
-#page-nav .navbar-nav {
-    float: none;
-    background: transparent;
+#page-nav .navbar-brand{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 10px;
 }
-
 #page-nav ul.nav-logo a {
     display: block;
     font-size: 36px;
-    margin-top: 10px;
     color: #00c2ff;
     text-decoration: none;
     margin-left: 20px;
 }
 
-#page-nav ul.navbar-left {
-    display: inline;
+#page-nav .navbar-collapse{
+    display:-webkit-flex !important;
+    display:flex !important;
 }
-
-#page-nav ul.nav-login {
-    margin-top: 10px;
+#page-nav .navbar-collapse .empty-info{
+    flex:0 0 200px
 }
-
-#page-nav ul.navbar-respond {
-    display: block;
-    margin: 0 auto;
-    width: 530px;
-    margin-top: 10px;
-    text-align: center;
+#menu{
+    flex:1
 }
-
+#page-nav .nav-login{
+    flex:0 0 200px;
+}
+#page-nav ul.nav-login li{
+    margin: 10px 0 0 10px;
+}
+#page-nav ul.nav-login li,
+#page-nav ul.navbar-respond{
+    text-align: center
+}
+#page-nav ul.nav-login li,
+#page-nav ul.navbar-respond li{
+    display: inline-block;
+    float: none
+}
 #page-nav ul.navbar-respond li a {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     background-color: transparent;
     position: relative;
     z-index: 1;
 }
 
-#page-nav ul.navbar-respond li.active a, #page-nav ul.navbar-respond li a:hover {
+#page-nav ul.navbar-respond li.active a, 
+#page-nav ul.navbar-respond li a:hover {
     color: #00c2ff;
 }
-.navbar-nav>li:hover::after, .navbar-nav>li.active::after {
+.navbar-respond > li:hover::after, 
+.navbar-respond > li.active::after {
     opacity: .14;
     transform: scale(1);
 }
-#login_user.active::after,#login_user.active:hover::after{
-    opacity: .14;
-    transform: scale(1);
-}
-#login_user.active a,#login_user.active a:hover{
-    color: #00c2ff;
-}
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover{
-    background-color: transparent;
-}
-.navbar-default .navbar-nav > li > a:hover {
-    color: #00c2ff;
-}
-.nav-tabs {
-    border-bottom:0px;
-}
-.navbar-nav>li::after {
-    content: '';
+.navbar-respond > li::after {
+    content: ' ';
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -102,23 +97,19 @@
     opacity: .3;
     transform: scale(0);
 }
-
-#page-nav ul.navbar-right {
-    margin-right: 100px;
-}
-
 #page-nav ul.nav-login li a {
     display: block;
-    font-size: 18px;
+    font-size: 14px;
+    color: #00c2ff;
     position: relative;
     z-index: 1;
+    padding: 0px;
+    line-height: 30px;
 }
-
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav >li>a {
     color: #fff;
     font-size: 18px;
 }
-
 #login .modal-dialog {
     width: 520px;
     height: 430px;
@@ -280,6 +271,9 @@
     font-weight: 350;
     width: 100%;
 }
+#page-person .col-md-2 .nav-tabs{
+    border:none;
+}
 
 #page-person .col-md-2 li a {
     color: #fff;
@@ -350,17 +344,17 @@
 }
 
 #page-person .contect-us {
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 #page-person .row {
-    margin: 100px 0 50px 0;
+    margin: 50px 0 50px 0;
 }
 
 #page-person .xian {
     width: 70px;
     height: 1px;
-    margin-left: 535px;
+    margin:0 auto;
     margin-bottom: 50px;
     background-image: url(../img/xian1.jpg);
     background-color: #00caff;

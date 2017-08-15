@@ -12,7 +12,7 @@ $(function(){
             var html ="";
             $.each(data,function(i,v){
                 if(i<4){
-                    html+='<div class="each"><text class="name">'+v.name+'</text><span class="eng_name" style="display:none;">'+v.eng_name+'</span><button class="uppol">更新</button></div>';
+                    html+='<div class="each"><span class="name">'+v.name+'</span><span class="eng_name" style="display:none;">'+v.eng_name+'</span><button class="uppol">更新</button></div>';
                 }
             });
             $("#pol").append(html);

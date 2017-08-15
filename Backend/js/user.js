@@ -6,13 +6,16 @@ $(function() {
         success: function(data) {
             var html = "";
             $.each(data, function(i, v) {
-                html += '<div class="each"><span class="id" style="display:none">'+v.id+'</span><text class="name">' + v.name + '</text>';
+                html += '<div class="each">';
+                html += '<span class="id" style="display:none">'+v.id+'</span>';
+                html += '<p class="name">' + v.name + '</p>';
                 if (v.type==0) {
-                	html+='<button class="toAdmin">升级为管理员</button></br></br><text class="type">普通用户</text>';
+                	html+='<div><button class="toAdmin">升级为管理员</button></div><p class="type">普通用户</p>';
                 }else{
-                	html+='</br></br><text class="type">管理员</text>';
+                	html+='<p class="type">管理员</p>';
                 }
-                html+='</br></br><text class="mail">E-mail：'+v.mail+'</text><hr>'
+                html+='<p class="mail">E-mail：'+v.mail+'</p>';
+                html+= '<hr></div>'
             });
             $(".main").append(html);
             //升级普通用户为管理员

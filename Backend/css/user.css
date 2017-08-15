@@ -40,13 +40,20 @@
 #instruction {
     line-height: 100px;
 }
-
+.each{
+    padding: 10px 0;
+}
 .main {
     margin: 0 auto;
     width: 700px;
     min-height: 900px;
 }
-
+hr{
+    margin: 10px 0;
+    height: 1px;
+    border: none;
+    background: #ccc;
+}
 .toAdmin {
     display: inline-block;
     position: relative;
@@ -59,19 +66,18 @@
     float: right;
 }
 
-text {
-    font-size: 14px;
-}
-
 .type {
-    font-family: "楷体";
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .name {
-    font-family: "楷体";
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.mail{
+    font-size: 14px;
 }
 .button {
     float: right;

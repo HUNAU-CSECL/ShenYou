@@ -23,7 +23,7 @@
 
 h2 {
     text-align: center;
-    font-family: "楷体";
+    padding: 10px 0;
 }
 
 text {
@@ -32,8 +32,10 @@ text {
 
 #pol_more, #eco_more, #pol_more {
     text-align: center;
-    color: #7B7B7B;
-    font-family: "楷体";
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 25px;
 }
 
 .each {
