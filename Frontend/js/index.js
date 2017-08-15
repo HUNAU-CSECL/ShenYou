@@ -142,8 +142,9 @@ $(document).ready(function () {
           });
           $('.ul2').append(html);
           // alert(html);
+          //mouseover
           $.each($('.ul2 li'), function (s, b) {
-            $(b).mouseover(function () {
+            $(b).click(function () {
               $("#exampleInputEmail1").val($(b).text());
             });
           });
