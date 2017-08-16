@@ -32,12 +32,17 @@ $(document).ready(function () {
   });
   $(".ul1").hide();
   $(".ul2").hide();
+  var eI = $("#exampleInputEmail1");
   $(".button1").click(function (e) {
+    if (eI.val()) {
+      eI.attr('placeholder', eI.val());
+      eI.val('');
+    }
     var _this = this;
     e.stopPropagation();
-    $(_this).animate({ 
+    $(_this).animate({
       width: 0,
-    }, 400 );
+    }, 400);
     $(".ul1").slideDown("slow", function () {
       $.each($(".ul1 li a"), function (i, v) {
         $(this).on("click", function (e) {
@@ -49,12 +54,15 @@ $(document).ready(function () {
         });
       });
       $('#page-search').on('click', function (e) {
+        if (!eI.val() && eI.attr('placeholder') != '搜索高校') {
+          eI.val(eI.attr('placeholder'));
+        }
         e.stopPropagation();
         $(".ul1").slideUp();
         $(".ul2").slideUp();
-        $(_this).animate({ 
+        $(_this).animate({
           width: "35px",
-        }, 400 );
+        }, 400);
       });
     });
   });
@@ -141,11 +149,13 @@ $(document).ready(function () {
             html += '<li><a href="javascript:void(0)">' + value + '</a></li>';
           });
           $('.ul2').append(html);
-          // alert(html);
-          //mouseover
+          //alert(html);
           $.each($('.ul2 li'), function (s, b) {
-            $(b).click(function () {
-              $("#exampleInputEmail1").val($(b).text());
+            $(b).mouseover(function () {
+              $("#exampleInputEmail1").attr('placeholder', $(b).text());
+              $(this).click(function () {
+                $("#exampleInputEmail1").val($(b).text());
+              });
             });
           });
         }

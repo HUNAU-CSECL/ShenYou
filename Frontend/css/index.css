@@ -479,7 +479,6 @@
 }
 /* ---------------------------- */
  #page-top{
-    display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,7 +510,7 @@
 }
 #page-top .container {
     width: 780px;
-    
+    margin: 0;
 }
 #page-top .container .project{
     
@@ -575,6 +574,7 @@
 }
 #page-contect .container{
     width: 780px;
+    margin: 0;
     padding-top:30px;
 }
 
@@ -686,6 +686,7 @@
 }
 #page-about .container{
     width: 780px;
+    margin: 0;
 }
 #page-about .project span {
     display: inline-block;
@@ -791,6 +792,7 @@
 
 #page-student .container{
     width: 800px;
+    margin: 0;
 }
 #page-student .row {
     margin-left: auto;
